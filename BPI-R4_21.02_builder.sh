@@ -42,7 +42,7 @@ git clone https://git01.mediatek.com/openwrt/feeds/mtk-openwrt-feeds || true
 #cd mtk-openwrt-feeds; git checkout b046effcce3869ab95bd23fb674cfedaf626d3f5; cd -;	#ok
 #cd mtk-openwrt-feeds; git checkout be639389a047a00cca671bf1a06b5848d054adbd; cd -;	#MP 4.0 release
 #cd mtk-openwrt-feeds; git checkout effe5b41b0fff8336ee6a0b10abdc1194e48b41a; cd -;	#readme old
-cd mtk-openwrt-feeds; git checkout 612001dcebc0385f0cfe5cc5ccbf5dfd640dd4e1; cd -;
+cd mtk-openwrt-feeds; git checkout 987f10f25039cde51d2cc442836cce88d93d49e0; cd -;
 
 sed -i 's/DEPENDS:=+netifd +ucode +ucode-mod-nl80211 +ucode-mod-rtnl +ucode-mod-ubus +ucode-mod-uci +ucode-mod-digest/DEPENDS:=+netifd +ucode +ucode-mod-nl80211 +ucode-mod-rtnl +ucode-mod-ubus +ucode-mod-uci/' openwrt/package/network/config/wifi-scripts/Makefile
 sed -i 's/DEPENDS:=+netifd +ucode +ucode-mod-nl80211 +ucode-mod-rtnl +ucode-mod-ubus +ucode-mod-uci +ucode-mod-digest/DEPENDS:=+netifd +ucode +ucode-mod-nl80211 +ucode-mod-rtnl +ucode-mod-ubus +ucode-mod-uci/' mac80211_package/package/network/config/wifi-scripts/Makefile
@@ -74,7 +74,7 @@ cd openwrt
 #\cp -r ../my_files/config ./.config
 
 export GIT_SSL_NO_VERIFY=1
-sed -i 's/src-git mtk_openwrt_feed https:\/\/git01.mediatek.com\/openwrt\/feeds\/mtk-openwrt-feeds/src-git mtk_openwrt_feed https:\/\/git01.mediatek.com\/openwrt\/feeds\/mtk-openwrt-feeds^612001d/' feeds.conf.default
+sed -i 's/src-git mtk_openwrt_feed https:\/\/git01.mediatek.com\/openwrt\/feeds\/mtk-openwrt-feeds/src-git mtk_openwrt_feed https:\/\/git01.mediatek.com\/openwrt\/feeds\/mtk-openwrt-feeds^987f10f/' feeds.conf.default
 ./scripts/feeds update -a
 
 #make menuconfig
